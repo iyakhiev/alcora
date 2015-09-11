@@ -1,0 +1,25 @@
+body {
+    padding-top: 50px;
+}
+
+.clearfix::after, .clearfix::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.controls {
+    position: relative;
+}
+
+.control-element {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.control-element i {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    font-size: 26px;
+}
