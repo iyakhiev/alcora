@@ -1,17 +1,42 @@
 <div class="questionary">
     <div class="container-fluid">
         <h1>Анкета</h1>
+        <form class="form-horizontal" name="questionaryForm">
+            <div class="form-group">
+                <div class="form-subgroup">
+                    <lable for="genderCheckboxes" class="form-subgroup-title">Пол:</lable>
+                    <div id="genderCheckboxes">
+                        <input id="maleCheckbox" type="checkbox" ng-model="questionary.gender" ng-true-value="'male'" ng-false-value="'female'">
+                        <label for="maleCheckbox">Мужской</label>
+                        <input id="femaleCheckbox" type="checkbox" ng-model="questionary.gender" ng-true-value="'female'" ng-false-value="'male'">
+                        <label for="femaleCheckbox">Женский</label>
+                    </div>
+                </div>
+                <div class="form-subgroup">
+                    <label class="form-subgroup-title" for="ageSelect">Возраст: </label>
+                    <select class="form-control" name="ageSelect" id="ageSelect" ng-model="questionary.age" ng-click="show()">
+                        <option ng-repeat="(key, age) in questionary.agesList" value="{{key}}">{{age}}</option>
+                    </select>
+                </div>
+                <div class="form-subgroup">
+                    <label class="form-subgroup-title" for="growthSelect">Рост: </label>
+                    <select class="form-control" name="growthSelect" id="growthSelect" ng-model="questionary.growth" ng-click="show()">
+                        <option ng-repeat="(key, growth) in questionary.growthList" value="{{key}}">{{growth}}</option>
+                    </select>
+                </div>
+                <div class="form-subgroup">
+                    <label class="form-subgroup-title" for="weightSelect">Вес: </label>
+                    <select class="form-control" name="weightSelect" id="weightSelect" ng-model="questionary.weight" ng-click="show()">
+                        <option ng-repeat="(key, weight) in questionary.weightList" value="{{key}}">{{weight}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group questionary-products">
+                <ul class="list-group">
+                    <li ng-repeat="listItem in questionary.undesirableProducts" class="list-group-item"
+                        ng-include="'src/partials/nested_list_template.html'">{{listItem.title}}</li>
+                </ul>
+            </div>
+        </form>
     </div>
-    <form class="form-horizontal" name="questionaryForm">
-        <div class="form-group">
-            <label>
-                Value1:
-                <input type="checkbox" ng-model="checkboxModel.value1" ng-change="">
-            </label><br/>
-            <label>
-                Value2:
-                <input type="checkbox" ng-model="checkboxModel.value2">
-            </label>
-        </div>
-    </form>
 </div>

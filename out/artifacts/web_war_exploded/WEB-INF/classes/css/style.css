@@ -26,4 +26,18 @@ body {
 
 .questionary h1 {
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.questionary .form-group {
+    text-align: center;
+}
+
+.form-subgroup {
+    display: inline-block;
+    margin: 20px;
+}
+
+.questionary ul {
+    text-align: left;
 }

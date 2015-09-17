@@ -121,7 +121,115 @@ alcoraCtrls.controller('CabinetCtrl', ['$scope',
 
     }]);
 
-alcoraCtrls.controller('QuestionaryCtrl', ['$scope',
-    function($scope) {
-
+alcoraCtrls.controller('QuestionaryCtrl', ['$scope', '$sce',
+    function($scope, $sce) {
+        $scope.questionary = {
+            gender: 'male',
+            age: "0",
+            growth: "0",
+            weight: "0",
+            agesList: (Array.from(Array(76).keys(), x => x + 15)),
+            growthList: (Array.from(Array(151).keys(), x => x + 100)),
+            weightList: (Array.from(Array(201).keys(), x => x + 30)),
+            undesirableProducts: [
+                { title: "Нежелательные продукты",
+                    list: [
+                        {
+                            title: "Продукты, вызывающие неприязнь",
+                            list: [
+                                {
+                                    title: "Фрукты и ягоды",
+                                    list: [
+                                        {
+                                            title: "Яблоки",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Груши",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Мандарины",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Апельсины",
+                                            list: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "Овощи",
+                                    list: [
+                                        {
+                                            title: "Помидоры",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Огурцы",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Картофель",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Репа",
+                                            list: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "Продукты, вызывающие аллергию",
+                            list: [
+                                {
+                                    title: "Фрукты и ягоды",
+                                    list: [
+                                        {
+                                            title: "Персик",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Слива",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Вишня",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Черешня",
+                                            list: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "Овощи",
+                                    list: [
+                                        {
+                                            title: "Капуста",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Хрен",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Укроп",
+                                            list: []
+                                        },
+                                        {
+                                            title: "Репа",
+                                            list: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
     }]);
