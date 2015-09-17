@@ -23,3 +23,7 @@ body {
     margin-top: -0.5em;
     font-size: 26px;
 }
+
+.questionary h1 {
+    text-align: center;
+}

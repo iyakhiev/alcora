@@ -120,3 +120,8 @@ alcoraCtrls.controller('CabinetCtrl', ['$scope',
     function($scope) {
 
     }]);
+
+alcoraCtrls.controller('QuestionaryCtrl', ['$scope',
+    function($scope) {
+
+    }]);

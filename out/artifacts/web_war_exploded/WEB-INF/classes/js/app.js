@@ -23,7 +23,11 @@ alcora.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'src/partials/cabinet.html',
             controller: 'CabinetCtrl'
         }).
+        when('/questionary', {
+            templateUrl: 'src/partials/questionary.html',
+            controller: 'QuestionaryCtrl'
+        }).
         otherwise({
-            redirectTo: '/register'
+            redirectTo: '/questionary'
         });
 }]);
