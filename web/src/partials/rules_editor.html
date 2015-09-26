@@ -1,0 +1,15 @@
+<div class="rules_editor">
+    <h3>Категории:</h3>
+    <ui-select ng-model="category.selected"
+               ng-disabled="disabled"
+               reset-search-input="false">
+        <ui-select-match placeholder="Начните вводить категорию...">
+            {{$select.selected.description}}
+        </ui-select-match>
+        <ui-select-choices repeat="cat in categories"
+                           refresh="refreshCategory($select.search)"
+                           refresh-delay="0">
+            <div ng-bind-html="cat.description | highlight: $select.search"></div>
+        </ui-select-choices>
+    </ui-select>
+</div>

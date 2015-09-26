@@ -6,6 +6,8 @@
 var alcora = angular.module('alcora', [
     'ngRoute',
     'ngCookies',
+    'ngSanitize',
+    'ui.select',
     'alcoraCtrls'
 ]);
 
@@ -27,7 +29,11 @@ alcora.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'src/partials/questionary.html',
             controller: 'QuestionaryCtrl'
         }).
+        when('/ruleseditor', {
+            templateUrl: 'src/partials/rules_editor.html',
+            controller: 'RulesEditorCtrl'
+        }).
         otherwise({
-            redirectTo: '/questionary'
+            redirectTo: '/ruleseditor'
         });
 }]);

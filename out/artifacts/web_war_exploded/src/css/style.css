@@ -1,11 +1,25 @@
 body {
     padding-top: 50px;
+    min-width: 360px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
 }
 
 .clearfix::after, .clearfix::before {
     content: "";
     display: table;
     clear: both;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
 }
 
 .controls {
@@ -40,4 +54,151 @@ body {
 
 .questionary ul {
     text-align: left;
+}
+
+.questionary-list-title {
+    cursor: pointer;
+    padding: 0px 20px;
+}
+
+.questionary-list-title-text {
+    line-height: 2.5em;
+}
+
+.questionary-list-title-text:hover {
+    text-decoration: underline;
+}
+
+.questionary-list-title:hover {
+    background-color: #8E8E8E;
+}
+
+.questionary-list-title input.form-control {
+    float: right;
+    width: 60px;
+    height: 2em;
+    padding: 0 6px 0 8px;
+    font-size: 14px;
+    margin: 0.2em 0;
+}
+
+.questionary-list-wrap {
+    padding-left: 35px;
+}
+
+.showInnerList > div > ul {
+    display: block;
+}
+
+.questionary-top-list {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.questionary-inner-list {
+    display: none;
+    margin-bottom: 0;
+    border-top: 1px solid black;
+}
+
+.questionary-top-list, .questionary-top-list li {
+    background-color: white;
+}
+
+.questionary-level-1, .questionary-level-1 li {
+    background-color: #F3F3F3;
+}
+
+.questionary-level-2, .questionary-level-2 li {
+    background-color: #E4E1E1;
+}
+
+.questionary-level-3, .questionary-level-3 li {
+    background-color: #CECECE;
+}
+
+.questionary-level-4, .questionary-level-4 li {
+    background-color: #B1B0B0;
+}
+
+.questionary-level-bottom, .questionary-level-bottom li {
+    background-color: #F3F3F3;
+}
+
+.list-group-item {
+    padding: 0;
+    border: 0;
+}
+
+.questionary-list-title .fa {
+    width: 11px;
+}
+
+.questionary-list-title i.fa.fa-square-o, .questionary-list-title i.fa.fa-check-square,
+.questionary-list-title i.fa.fa-check-circle, .questionary-list-title i.fa.fa-circle-o{
+    float: right;
+    font-size: 17px;
+    line-height: 2em;
+}
+
+.goal-block {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 270px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.goal-block:hover {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.goal-block-clicked {
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.4);
+    background-color: #8AFF98;
+}
+
+.goal-block-clicked:hover {
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.goal-check-button {
+    float: left;
+    margin: 20px 10px;
+    font-size: 25px;
+}
+
+.goal-description {
+    position: absolute;
+    top: 74px;
+    z-index: 10;
+    width: 270px;
+    display: none;
+    background-color: #FDFCFC;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.goal-block:hover .goal-description {
+    display: block;
+}
+
+.goal-description ul {
+    margin: 0;
+    padding: 10px 0 10px 35px;
+    list-style: initial;
+}
+
+.goal-description li {
+    line-height: 2em;
+}
+
+.goal-title {
+    margin: 20px 0;
 }

@@ -6,6 +6,8 @@
 var alcora = angular.module('alcora', [
     'ngRoute',
     'ngCookies',
+    'ngSanitize',
+    'ui.select',
     'alcoraCtrls'
 ]);
 
