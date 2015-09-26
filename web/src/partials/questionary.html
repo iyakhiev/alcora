@@ -1,16 +1,26 @@
 <div class="questionary">
-    <div class="container-fluid">
-        <h1>Анкета</h1>
+    <div class="container">
+        <h1 ng-click="add()">Анкета</h1>
         <form class="form-horizontal" name="questionaryForm">
+            <div class="form-group goals-titles">
+                <div class="goal-block" ng-class="visibility" ng-repeat="g in questionary.goals"
+                     ng-click="visibility = (visibility == 'goal-block-clicked' ? '' :'goal-block-clicked')">
+                    <div class="goal-block-content">
+                        <h2 class="goal-title">{{g.title}}</h2>
+                        <div class="goal-description">
+                            <ul>
+                                <li ng-repeat="l in g.goals_list">{{l}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <div class="form-subgroup">
-                    <lable for="genderCheckboxes" class="form-subgroup-title">Пол:</lable>
-                    <div id="genderCheckboxes">
-                        <input id="maleCheckbox" type="checkbox" ng-model="questionary.gender" ng-true-value="'male'" ng-false-value="'female'">
-                        <label for="maleCheckbox">Мужской</label>
-                        <input id="femaleCheckbox" type="checkbox" ng-model="questionary.gender" ng-true-value="'female'" ng-false-value="'male'">
-                        <label for="femaleCheckbox">Женский</label>
-                    </div>
+                    <label class="form-subgroup-title" for="genderSelect">Пол: </label>
+                    <select class="form-control" name="genderSelect" id="genderSelect" ng-model="questionary.gender" ng-click="show()">
+                        <option ng-repeat="(key, gender) in questionary.genderList" value="{{key}}">{{gender}}</option>
+                    </select>
                 </div>
                 <div class="form-subgroup">
                     <label class="form-subgroup-title" for="ageSelect">Возраст: </label>
@@ -32,9 +42,130 @@
                 </div>
             </div>
             <div class="form-group questionary-products">
-                <ul class="list-group">
-                    <li ng-repeat="listItem in questionary.undesirableProducts" class="list-group-item"
-                        ng-include="'src/partials/nested_list_template.html'">{{listItem.title}}</li>
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.food" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="322">
+                            <i ng-class="listItem.icon" class="fa fa-caret-right"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap ng-scope" ng-include="'src/partials/nested_list_template.html'">
+                            <ul class="list-group questionary-inner-list questionary-level-1">
+                                <li ng-repeat="listItem in questionary.food.list['323']" ng-class="listItem.showInner" class="list-group-item">
+                                    <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                                        <i ng-class="listItem.icon"></i>
+                                        <span class="questionary-list-title-text">{{listItem.title}}</span>
+                                    </div>
+                                    <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                                </li>
+                                <li ng-repeat="listItem in questionary.food.list['324']" ng-class="listItem.showInner" class="list-group-item">
+                                    <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                                        <i ng-class="listItem.icon"></i>
+                                        <span class="questionary-list-title-text">{{listItem.title}}</span>
+                                    </div>
+                                    <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-disease">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.disease" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-anthropometry">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.anthropometry" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-meal_pattern">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.meal_pattern" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-sleep_pattern">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.sleep_pattern" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-sports_experience">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.sports_experience" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-pernicious_habits">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.pernicious_habits" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-training_frequency">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.training_frequency" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-training_day">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.training_day" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group questionary-doctor_visit_pattern">
+                <ul class="list-group questionary-top-list">
+                    <li ng-repeat="listItem in questionary.doctor_visit_pattern" ng-class="listItem.showInner" class="list-group-item">
+                        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+                            <i ng-class="listItem.icon"></i>
+                            <span class="questionary-list-title-text">{{listItem.title}}</span>
+                        </div>
+                        <div class="questionary-list-wrap" ng-include="'src/partials/nested_list_template.html'"></div>
+                    </li>
                 </ul>
             </div>
         </form>

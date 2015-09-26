@@ -1,4 +1,11 @@
-{{listItem.title}}
-<ul class="list-group">
-    <li ng-repeat="listItem in listItem.list" class="list-group-item" ng-include="'src/partials/nested_list_template.html'"></li>
+<ul class="list-group questionary-inner-list questionary-level-{{listItem.level}}">
+    <li ng-repeat="listItem in listItem.list" ng-class="listItem.showInner"  class="list-group-item">
+        <div class="questionary-list-title" ng-click="toggleList(listItem)" data-id="{{listItem.id}}">
+            <i ng-show="{{listItem.select_type != 'int'}}" ng-class="listItem.icon"></i>
+            <input class="form-control" ng-show="{{listItem.select_type == 'int'}}" type="number" name="input" ng-model="listItem.value"
+                   min="10" max="300" required>
+            <span class="questionary-list-title-text">{{listItem.title}}</span>
+        </div>
+        <div class="questionary-list-wrap" ng-include="listItem.list.length ? 'src/partials/nested_list_template.html' : ''"></div>
+    </li>
 </ul>

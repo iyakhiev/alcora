@@ -21,4 +21,22 @@
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>questionary</servlet-name>
+        <servlet-class>servlets.Questionary</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>questionary</servlet-name>
+        <url-pattern>/questionary</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>rules</servlet-name>
+        <servlet-class>servlets.Rules</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rules</servlet-name>
+        <url-pattern>/rules</url-pattern>
+    </servlet-mapping>
 </web-app>
