@@ -5,7 +5,7 @@
       <title></title>
         <link rel="stylesheet" type="text/css" href="src/components/fontawesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="src/components/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.12.1/select.min.css">
+        <link rel="stylesheet" type="text/css" href="src/css/select.css">
         <link rel="stylesheet" type="text/css" href="src/css/style.css">
     </head>
     <body>

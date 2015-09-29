@@ -446,10 +446,23 @@ alcoraCtrls.controller('RulesEditorCtrl', ['$scope', '$http',
     function($scope, $http) {
         $scope.disabled = false;
         $scope.category = {};
+        $scope.operation = {};
+
+        var data = "action=getoperations";
+        postFunction($http, '/web_war_exploded/rules', data, function (data) {
+            console.log("success:", data);
+            if (data != null && data.list != null && data.list != "empty" && data.list.length > 0) {
+                $scope.operations = data.list;
+            } else {
+                $scope.operations = [];
+            }
+        }, function (data, status) {
+            console.log("error in getoperations:", data, status);
+        });
 
         $scope.refreshCategory = function(category) {
             if(category.length > 0) {
-                var data = "category=" + category;
+                var data = "action=getcategories&category=" + category;
                 postFunction($http, '/web_war_exploded/rules', data, function (data) {
                     console.log("success:", data);
                     if (data != null && data.list != null && data.list != "empty" && data.list.length > 0) {
@@ -458,7 +471,7 @@ alcoraCtrls.controller('RulesEditorCtrl', ['$scope', '$http',
                         $scope.categories = [];
                     }
                 }, function (data, status) {
-                    console.log("error:", data, status);
+                    console.log("error in getcategories:", data, status);
                 });
             }
         };

@@ -24,26 +24,46 @@ public class Rules extends HttpServlet {
             res.setContentType("text/html; charset=UTF-8");
             res.setCharacterEncoding("UTF-8");
             PrintWriter out = res.getWriter();
-            String category = req.getParameter("category");
+            String action = req.getParameter("action");
+            if(action.equals("getcategories")) {
+                String category = req.getParameter("category");
 
-            Statement stmt = db.connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from alcora.categories where description like '%" + category + "%';");
-            String answer = "{ \"list\": [";
-            int n = 0;
-            while (rs.next()) {
-                n++;
-                String id = rs.getString("id"),
-                        description = rs.getString("description");
-                answer += "{ " +
-                        "\"id\": \"" + id + "\", " +
-                        "\"description\": \"" + description + "\" " +
-                        " },";
+                Statement stmt = db.connection.createStatement();
+                ResultSet rs = stmt.executeQuery("select * from alcora.categories where description like '%" + category + "%';");
+                String answer = "{ \"list\": [";
+                int n = 0;
+                while (rs.next()) {
+                    n++;
+                    String id = rs.getString("id"),
+                            description = rs.getString("description");
+                    answer += "{ " +
+                            "\"id\": \"" + id + "\", " +
+                            "\"description\": \"" + description + "\" " +
+                            " },";
+                }
+                answer = answer.substring(0, answer.length() - 1);
+                answer += "]}";
+                out.println(n > 0 ? answer : "{ \"list\": \"empty\" }");
             }
-            answer = answer.substring(0, answer.length() - 1);
-            answer += "]}";
-            out.println(n > 0 ? answer : "{ \"list\": \"empty\" }");
+            if(action.equals("getoperations")) {
+                Statement stmt = db.connection.createStatement();
+                ResultSet rs = stmt.executeQuery("select * from alcora.operations");
+                String answer = "{ \"list\": [";
+                int n = 0;
+                while (rs.next()) {
+                    n++;
+                    String id = rs.getString("id"),
+                            description = rs.getString("description");
+                    answer += "{ " +
+                            "\"id\": \"" + id + "\", " +
+                            "\"description\": \"" + description + "\" " +
+                            " },";
+                }
+                answer = answer.substring(0, answer.length() - 1);
+                answer += "]}";
+                out.println(n > 0 ? answer : "{ \"list\": \"empty\" }");
+            }
             out.close();
-
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {

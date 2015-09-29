@@ -1,15 +1,46 @@
-<div class="rules_editor">
-    <h3>Категории:</h3>
-    <ui-select ng-model="category.selected"
-               ng-disabled="disabled"
-               reset-search-input="false">
-        <ui-select-match placeholder="Начните вводить категорию...">
-            {{$select.selected.description}}
-        </ui-select-match>
-        <ui-select-choices repeat="cat in categories"
-                           refresh="refreshCategory($select.search)"
-                           refresh-delay="0">
-            <div ng-bind-html="cat.description | highlight: $select.search"></div>
-        </ui-select-choices>
-    </ui-select>
+<div class="rules-editor">
+    <div class="container">
+        <div class="categories">
+            <h3>Категории:</h3>
+            <ui-select ng-model="category.selected"
+                       ng-disabled="disabled"
+                       reset-search-input="false">
+                <ui-select-match placeholder="Начните вводить категорию...">
+                    {{$select.selected.description}}
+                </ui-select-match>
+                <ui-select-choices repeat="cat in categories"
+                                   refresh="refreshCategory($select.search)"
+                                   refresh-delay="0">
+                    <div ng-bind-html="cat.description | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+        <div class="operation">
+            <h3>Операции:</h3>
+            <ui-select ng-model="operation.selected"
+                       ng-disabled="disabled"
+                       reset-search-input="false">
+                <ui-select-match placeholder="Начните вводить операцию...">
+                    {{$select.selected.description}}
+                </ui-select-match>
+                <ui-select-choices repeat="op in operations">
+                    <div ng-bind-html="op.description | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+        <div>
+            <h3>Правило:</h3>
+            <div class="rules-editing-block">
+                <div class="rule-block operation-rule-block">(</div>
+                <div class="rule-block"><span class="operation-word">ЕСТЬ</span> "Наращивание мыщечной массы"</div>
+                <div class="rule-block operation-rule-block">ИЛИ</div>
+                <div class="rule-block"><span class="operation-word">ЕСТЬ</span> "Развитие силы"</div>
+                <div class="rule-block operation-rule-block">)</div>
+                <div class="rule-block operation-rule-block">И</div>
+                <div class="rule-block"><span class="operation-word">НЕТ</span> "Питание"</div>
+                <div class="rule-block operation-rule-block">ПРЕДЛОЖИТЬ</div>
+                <div class="rule-block">"Здоровое сбалансированное питание"</div>
+            </div>
+        </div>
+    </div>
 </div>
