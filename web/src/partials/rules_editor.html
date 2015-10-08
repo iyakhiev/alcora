@@ -1,46 +1,79 @@
 <div class="rules-editor">
     <div class="container">
-        <div class="categories">
+        <div class="row operation" ng-disabled="true">
+            <h3>Операции:</h3>
+            <div id="op-sortable-container" class="operations-block">
+                <button type="button" class="operation-block btn btn-default" ng-repeat="op in operations" ng-click="operation_button(op)"
+                        ng-disabled="(op.type == 'category' ? is_buttons_disabled : op_buttons_disabled)" data-id="{{op.id}}">
+                    {{op.content}}
+                </button>
+            </div>
+        </div>
+        <div class="row categories">
             <h3>Категории:</h3>
-            <ui-select ng-model="category.selected"
-                       ng-disabled="disabled"
-                       reset-search-input="false">
+            <ui-select id="categories-select"
+                       ng-model="category.selected"
+                       ng-disabled="category_disabled"
+                       reset-search-input="true">
                 <ui-select-match placeholder="Начните вводить категорию...">
                     {{$select.selected.description}}
                 </ui-select-match>
                 <ui-select-choices repeat="cat in categories"
                                    refresh="refreshCategory($select.search)"
                                    refresh-delay="0">
-                    <div ng-bind-html="cat.description | highlight: $select.search"></div>
+                    <div class="select-options" ng-click="select_option(cat)" ng-bind-html="cat.description | highlight: $select.search"></div>
                 </ui-select-choices>
             </ui-select>
-        </div>
-        <div class="operation">
-            <h3>Операции:</h3>
-            <ui-select ng-model="operation.selected"
-                       ng-disabled="disabled"
-                       reset-search-input="false">
-                <ui-select-match placeholder="Начните вводить операцию...">
-                    {{$select.selected.description}}
-                </ui-select-match>
-                <ui-select-choices repeat="op in operations">
-                    <div ng-bind-html="op.description | highlight: $select.search"></div>
-                </ui-select-choices>
-            </ui-select>
-        </div>
-        <div>
-            <h3>Правило:</h3>
-            <div class="rules-editing-block">
-                <div class="rule-block operation-rule-block">(</div>
-                <div class="rule-block"><span class="operation-word">ЕСТЬ</span> "Наращивание мыщечной массы"</div>
-                <div class="rule-block operation-rule-block">ИЛИ</div>
-                <div class="rule-block"><span class="operation-word">ЕСТЬ</span> "Развитие силы"</div>
-                <div class="rule-block operation-rule-block">)</div>
-                <div class="rule-block operation-rule-block">И</div>
-                <div class="rule-block"><span class="operation-word">НЕТ</span> "Питание"</div>
-                <div class="rule-block operation-rule-block">ПРЕДЛОЖИТЬ</div>
-                <div class="rule-block">"Здоровое сбалансированное питание"</div>
+            <h4>Последние категории:</h4>
+            <div id="last-categories-container" class="rule-editing-block clearfix">
+                <div class="rule-block lc-block" ng-click="select_lc(cat)" ng-repeat="(key, cat) in last_categories">
+                    <span ng-show="cat['operation-word']" class="operation-word">{{cat['operation-word']}}</span>
+                    {{cat.content}}
+                </div>
             </div>
+        </div>
+        <div class="row rules">
+            <h3 ng-click="click()">Правило:</h3>
+            <div class="rules-block">
+                <h4>Если:<i ng-click="cleanRuleParts('if')" class="delete-rule fa fa-trash-o"></i></h4>
+                <div id="if-sortable-container" class="rule-editing-block clearfix" as-sortable="sortable_options_if"
+                     ng-model="rule_parts.if" ng-class="checked_area">
+                    <div class="rule-block" ng-repeat="(key, rule) in rule_parts.if" ng-class="rule.class" as-sortable-item>
+                        <i class="fa fa-times delete-rule-part" ng-click="deleteRulePart(key, 'if')"></i>
+                        <div class="rule-block-handle" as-sortable-item-handle></div>
+                        <span ng-show="rule['operation-word']" class="operation-word">{{rule['operation-word']}}</span>
+                        {{rule.content}}
+                    </div>
+                </div>
+            </div>
+            <div class="rules-block">
+                <h4>То:<i ng-click="cleanRuleParts('then')" class="delete-rule fa fa-trash-o"></i></h4>
+                <ui-select id="then-operations-select"
+                           ng-model="then_operation.selected"
+                           reset-search-input="false">
+                    <ui-select-match placeholder="Начните вводить операцию...">
+                        {{$select.selected.content}}
+                    </ui-select-match>
+                    <ui-select-choices repeat="op in then_operations">
+                        <div class="select-options" ng-bind-html="op.content | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="rules-block">
+                <div id="then-sortable-container" class="rule-editing-block clearfix" as-sortable="sortable_options_then"
+                     ng-model="rule_parts.then" ng-class="checked_area">
+                    <div class="rule-block" ng-repeat="(key, rule) in rule_parts.then" ng-class="rule.class" as-sortable-item>
+                        <i class="fa fa-times delete-rule-part" ng-click="deleteRulePart(key, 'then')"></i>
+                        <div class="rule-block-handle" as-sortable-item-handle></div>
+                        <span ng-show="rule['operation-word']" class="operation-word">{{rule['operation-word']}}</span>
+                        {{rule.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row re-last-row">
+            <div class="re-message" ng-class="check_rule_error_color">{{check_rule_error}}</div>
+            <button type="button" class="re-save btn btn-success btn-lg" ng-click="save_rule()">Сохранить</button>
         </div>
     </div>
 </div>

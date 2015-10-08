@@ -8,6 +8,7 @@ var alcora = angular.module('alcora', [
     'ngCookies',
     'ngSanitize',
     'ui.select',
+    'as.sortable',
     'alcoraCtrls'
 ]);
 
