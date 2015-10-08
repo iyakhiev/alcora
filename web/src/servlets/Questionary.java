@@ -1,13 +1,8 @@
 package servlets;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.servlet.http.*;
+import java.io.*;
+import java.sql.*;
 
 /**
  * Created by Asus on 11.09.2015.

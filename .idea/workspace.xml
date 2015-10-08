@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddc44661-0317-481e-b55d-97ac675aacdf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/servlets/Rules2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/servlets/Rules.java" afterPath="$PROJECT_DIR$/web/src/servlets/Rules.java" />
+      <change type="MOVED" beforePath="C:\Users\Isa\IdeaProjects\alcora\web\src\servlets\Rules2.java" afterPath="$PROJECT_DIR$/web/src/servlets/Rules.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/servlets/Questionary.java" afterPath="$PROJECT_DIR$/web/src/servlets/Questionary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -177,7 +177,7 @@
         <entry file="file://$PROJECT_DIR$/web/src/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="557" column="39" selection-start-line="557" selection-start-column="39" selection-end-line="557" selection-end-column="39" />
+              <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
                 <element signature="e#191#941#0" expanded="false" />
@@ -217,7 +217,6 @@
                 <element signature="e#4631#4672#0" expanded="false" />
                 <element signature="e#4663#4671#0" expanded="false" />
                 <element signature="e#4718#17325#0" expanded="false" />
-                <element signature="e#4766#17324#0" expanded="false" />
                 <element signature="e#5074#5450#0" expanded="false" />
                 <element signature="e#5111#5255#0" expanded="false" />
                 <element signature="e#5171#5241#0" expanded="false" />
@@ -411,38 +410,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rules2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/servlets/Rules2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Rules2#0" expanded="false" />
-                <marker date="1444314367740" expanded="true" signature="965:1040" placeholder="select * fro..categories..." />
-                <marker date="1444314367740" expanded="true" signature="1877:1908" placeholder="select * fro..operations..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Rules.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/src/servlets/Rules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.112433866">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Questionary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/servlets/Questionary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.33730158">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Rules#0" expanded="false" />
+                <marker date="1444316327470" expanded="true" signature="954:1029" placeholder="select * fro..categories..." />
+                <marker date="1444316327470" expanded="true" signature="1866:1897" placeholder="select * fro..operations..." />
               </folding>
             </state>
           </provider>
@@ -478,7 +455,6 @@
         <option value="$PROJECT_DIR$/out/production/Alcora/css/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/src/servlets/Login.java" />
-        <option value="$PROJECT_DIR$/web/src/servlets/Questionary.java" />
         <option value="$PROJECT_DIR$/web/src/partials/nested_list_template.html" />
         <option value="$PROJECT_DIR$/web/src/partials/register.html" />
         <option value="$PROJECT_DIR$/web/src/components/angular/angular-sanitize/angular-sanitize.min.js" />
@@ -494,9 +470,10 @@
         <option value="$PROJECT_DIR$/web/src/js/app.js" />
         <option value="$PROJECT_DIR$/Alcora.iml" />
         <option value="$PROJECT_DIR$/web/src/js/controllers.js" />
-        <option value="$PROJECT_DIR$/web/src/servlets/Rules.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/src/servlets/Questionary.java" />
         <option value="$PROJECT_DIR$/web/src/servlets/Rules2.java" />
+        <option value="$PROJECT_DIR$/web/src/servlets/Rules.java" />
       </list>
     </option>
   </component>
@@ -605,15 +582,9 @@
               <option name="myItemId" value="Alcora" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -623,68 +594,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alcora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1083,7 +992,7 @@
       <workItem from="1442478020359" duration="12031000" />
       <workItem from="1442904315021" duration="124663000" />
       <workItem from="1444305094393" duration="6744000" />
-      <workItem from="1444313570671" duration="820000" />
+      <workItem from="1444313570671" duration="3175000" />
     </task>
     <task id="LOCAL-00001" summary="push">
       <created>1442475250127</created>
@@ -1145,11 +1054,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444313445176</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="push">
+      <created>1444314407385</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1444314407385</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166399000" />
+    <option name="totallyTimeSpent" value="168754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
@@ -1164,7 +1079,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5905612" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21658097" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21658097" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3239796" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1844473" sideWeight="0.49489796" order="0" side_tool="false" content_ui="combo" />
@@ -1182,34 +1097,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780612" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21979435" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5905512" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908162" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24871466" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1844473" sideWeight="0.49489796" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1844473" sideWeight="0.50510204" order="4" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1247,15 +1134,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/servlets/Rules2.java">
+    <entry file="file://$PROJECT_DIR$/web/src/servlets/Rules.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Rules2#0" expanded="false" />
-            <marker date="1444314367740" expanded="true" signature="965:1040" placeholder="select * fro..categories..." />
-            <marker date="1444314367740" expanded="true" signature="1877:1908" placeholder="select * fro..operations..." />
+            <element signature="docComment;class#Rules#0" expanded="false" />
+            <marker date="1444316327470" expanded="true" signature="954:1029" placeholder="select * fro..categories..." />
+            <marker date="1444316327470" expanded="true" signature="1866:1897" placeholder="select * fro..operations..." />
           </folding>
         </state>
       </provider>
@@ -1375,7 +1262,6 @@
             <element signature="e#4631#4672#0" expanded="false" />
             <element signature="e#4663#4671#0" expanded="false" />
             <element signature="e#4718#17325#0" expanded="false" />
-            <element signature="e#4766#17324#0" expanded="false" />
             <element signature="e#5074#5450#0" expanded="false" />
             <element signature="e#5111#5255#0" expanded="false" />
             <element signature="e#5171#5241#0" expanded="false" />
@@ -1666,7 +1552,6 @@
             <element signature="e#4631#4672#0" expanded="false" />
             <element signature="e#4663#4671#0" expanded="false" />
             <element signature="e#4718#17325#0" expanded="false" />
-            <element signature="e#4766#17324#0" expanded="false" />
             <element signature="e#5074#5450#0" expanded="false" />
             <element signature="e#5111#5255#0" expanded="false" />
             <element signature="e#5171#5241#0" expanded="false" />
@@ -1929,7 +1814,6 @@
             <element signature="e#4631#4672#0" expanded="false" />
             <element signature="e#4663#4671#0" expanded="false" />
             <element signature="e#4718#17325#0" expanded="false" />
-            <element signature="e#4766#17324#0" expanded="false" />
             <element signature="e#5074#5450#0" expanded="false" />
             <element signature="e#5111#5255#0" expanded="false" />
             <element signature="e#5171#5241#0" expanded="false" />
@@ -2359,13 +2243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/partials/questionary.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25616437">
@@ -2441,7 +2318,7 @@
     <entry file="file://$PROJECT_DIR$/web/src/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="557" column="39" selection-start-line="557" selection-start-column="39" selection-end-line="557" selection-end-column="39" />
+          <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
             <element signature="e#191#941#0" expanded="false" />
@@ -2481,7 +2358,6 @@
             <element signature="e#4631#4672#0" expanded="false" />
             <element signature="e#4663#4671#0" expanded="false" />
             <element signature="e#4718#17325#0" expanded="false" />
-            <element signature="e#4766#17324#0" expanded="false" />
             <element signature="e#5074#5450#0" expanded="false" />
             <element signature="e#5111#5255#0" expanded="false" />
             <element signature="e#5171#5241#0" expanded="false" />
@@ -2672,32 +2548,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/src/servlets/Questionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.2579365">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Questionary#0" expanded="false" />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT id, d..*..." />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..*..." />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..id_child..." />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT id_ch..categories_connections..." />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..categories..." />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT id_pa..categories_connections..." />
+            <marker date="1444315217050" expanded="true" signature="-1:-1" placeholder="SELECT id as..categories_types..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/servlets/Rules2.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Rules2#0" expanded="false" />
-            <marker date="1444314367740" expanded="true" signature="965:1040" placeholder="select * fro..categories..." />
-            <marker date="1444314367740" expanded="true" signature="1877:1908" placeholder="select * fro..operations..." />
-          </folding>
+        <state vertical-scroll-proportion="0.1399177">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/src/servlets/Rules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112433866">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.33730158">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Rules#0" expanded="false" />
+            <marker date="1444316327470" expanded="true" signature="954:1029" placeholder="select * fro..categories..." />
+            <marker date="1444316327470" expanded="true" signature="1866:1897" placeholder="select * fro..operations..." />
+          </folding>
         </state>
       </provider>
     </entry>
