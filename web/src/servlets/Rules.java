@@ -3,6 +3,7 @@ package servlets;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -20,10 +21,9 @@ public class Rules extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) {
-        try {
+        try (PrintWriter out = res.getWriter()) {
             res.setContentType("text/html; charset=UTF-8");
             res.setCharacterEncoding("UTF-8");
-            PrintWriter out = res.getWriter();
             String action = req.getParameter("action");
             if(action.equals("getcategories")) {
                 String category = req.getParameter("category");
@@ -53,20 +53,20 @@ public class Rules extends HttpServlet {
                 while (rs.next()) {
                     n++;
                     String id = rs.getString("id"),
-                            description = rs.getString("description");
+                            description = rs.getString("description"),
+                            type = rs.getString("type");
                     answer += "{ " +
                             "\"id\": \"" + id + "\", " +
-                            "\"description\": \"" + description + "\" " +
+                            "\"description\": \"" + description + "\", " +
+                            "\"type\": \"" + type + "\" " +
                             " },";
                 }
                 answer = answer.substring(0, answer.length() - 1);
                 answer += "]}";
+                System.out.println("answer: " + answer);
                 out.println(n > 0 ? answer : "{ \"list\": \"empty\" }");
             }
-            out.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
     }
