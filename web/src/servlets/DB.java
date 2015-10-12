@@ -13,7 +13,7 @@ public class DB {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
 
             try {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/alcora", "root", "admin");
+                connection = DriverManager.getConnection("jdbc:mysql://77.222.43.150/alcora_test", "isa", "passw0rd");
                 if (connection == null) {
                     System.out.println("No connection with DB!");
                 } else {
